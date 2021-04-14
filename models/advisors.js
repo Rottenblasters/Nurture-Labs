@@ -7,7 +7,7 @@ const AdvisorSchema = new Schema({
     name: {
         type : String,
         required : true
-        // to get unique advisors not implemented for ease of testing
+        // to register unique advisors (not implemented for ease of testing)
         // unique : true
     },
     image: {

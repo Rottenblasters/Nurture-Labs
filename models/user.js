@@ -6,7 +6,7 @@ const UserSchema = new Schema({
     email: {
         type: String,
         required: true
-        // to get unique users not implemented for ease of testing
+        // to register unique users (not implemented for ease of testing)
         // unique : true
     },
     name: {
