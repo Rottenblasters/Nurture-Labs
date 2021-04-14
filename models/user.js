@@ -16,7 +16,8 @@ const UserSchema = new Schema({
     },
     advisor : [{
         type: Schema.Types.ObjectId,
-        ref: 'Advisor'
+        ref: 'Advisor',
+        unique : true
     }]
 });
 
