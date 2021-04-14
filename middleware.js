@@ -4,7 +4,6 @@ const { advisorSchema ,
         bookingSchema} = require('./schemas.js');
 const User = require("./models/user");
 const bcrypt = require('bcryptjs');
-const ExpressError = require('./utils/ExpressError');
 const jwt = require('jsonwebtoken');
 const user = require('./models/user.js');
 
