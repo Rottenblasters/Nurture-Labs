@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+// Bookings collection schema
 const BookingSchema = new Schema({
     userId : {
         type: String,

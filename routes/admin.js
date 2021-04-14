@@ -5,17 +5,21 @@ const Advisor = require('../models/advisors');
 const { validateAdvisor } = require('../middleware');
 
 
-
+// Advisor Registration Route
 router.post('/advisor',validateAdvisor, catchAsync(async(req, res, next) => {
     try{
+
+        // save new advisor
         const advisor = new Advisor({name : req.body.name,
                                      image: req.body.image});
         await advisor.save();
+
         res.status(200).send('200_OK');
     }
     catch{
         res.status(400).send('400_BAD_REQUEST');
     }
 }));
+
 
 module.exports = router;

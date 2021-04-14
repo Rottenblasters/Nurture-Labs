@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+// Advisor collection schema
 const AdvisorSchema = new Schema({
     name: {
         type : String,
