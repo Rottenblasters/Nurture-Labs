@@ -6,8 +6,9 @@ const Schema = mongoose.Schema;
 const AdvisorSchema = new Schema({
     name: {
         type : String,
-        required : true,
-        unique : true
+        required : true
+        // to get unique advisors not implemented for ease of testing
+        // unique : true
     },
     image: {
         type : String,

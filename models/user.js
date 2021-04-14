@@ -5,8 +5,9 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
     email: {
         type: String,
-        required: true,
-        unique : true
+        required: true
+        // to get unique users not implemented for ease of testing
+        // unique : true
     },
     name: {
         type: String,
