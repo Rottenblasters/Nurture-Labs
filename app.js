@@ -9,8 +9,8 @@ const adminRoutes = require('./routes/admin');
 const userRoutes = require('./routes/user');
 
 const app = express();
-// const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/nuture-labs';
-const dbUrl = 'mongodb://localhost:27017/nuture-labs';
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/nuture-labs';
+// const dbUrl = 'mongodb://localhost:27017/nuture-labs';
 
 mongoose.connect(dbUrl, {                                
     useNewUrlParser: true,
