@@ -92,9 +92,9 @@ router.post('/register',validateUser, catchAsync(async(req, res, next) => {
 
 // Login user
 router.post('/login',loginValidation, authenticate, catchAsync(async(req, res, next) => {
-    const token = jwt.sign({_id : req.user._id,},secret);
-
     // generate JWT token
+    const token = jwt.sign({_id : req.user._id,},secret);
+        
     res.header('jwt-token', token).send({'jwt-token': token,
                                          'user-id': req.user._id});
 }));
