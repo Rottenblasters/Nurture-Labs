@@ -18,7 +18,8 @@ router.get('/:userId/advisor',catchAsync(async(req, res, next) => {
         const{ userId } = req.params;
         const user = await User.findById(userId).populate('advisor','_id name image');
         const advisors = user.advisor;
-        res.status(200).send(advisors);
+        const uniqueAdvisors = advisors.filter((x, i, a) => a.indexOf(x) == i);
+        res.status(200).send(uniqueAdvisors);
     }
     catch{
         return res.status(400).send('400_BAD_REQUEST');

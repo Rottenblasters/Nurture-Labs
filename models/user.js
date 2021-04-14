@@ -5,7 +5,7 @@ const UserSchema = new Schema({
     email: {
         type: String,
         required: true,
-        unique: true
+        unique : true
     },
     name: {
         type: String,
@@ -18,7 +18,6 @@ const UserSchema = new Schema({
     advisor : [{
         type: Schema.Types.ObjectId,
         ref: 'Advisor'
-        //unique : true
     }]
 });
 
